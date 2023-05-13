@@ -1,4 +1,4 @@
-let num1,num2,operator;
+let num1=0,num2=0,operator="";
 function add(num1,num2){
     return num1+num2;
 };
@@ -11,22 +11,23 @@ function multiply(num1,num2){
 function divide(num1,num2){
     return num1/num2;
 };
-let button=document.querySelectorAll('button');
-button.forEach(button=>button.addEventListener('click',handleClick));
+let display=document.querySelector('.Display');
+let buttons=document.querySelectorAll('.button');
+buttons.forEach(button=>button.addEventListener('click', handleClick));
 function handleClick(e){
-    let clickedButton= e.target;
-    if(isNaN(clickedButton.textContent)) {
+    let clickedButton=e.target;
+    if (isNaN(clickedButton.textContent)) {
         operator=clickedButton.textContent;
-    }
-    else{
-        if(operator===""){
-            num1=parseInt(clickedButton.textContent);
+        display.textContent+=operator;
+    } else {
+        if (operator==="") {
+            num1=""+num1+clickedButton.textContent;
+            num1=Number(num1);
+            display.textContent=num1;
+        } else {
+            num2=""+num2+clickedButton.textContent;
+            num2=Number(num2);
+            display.textContent=num2;
         }
-        else{
-            num2=parseInt(clickedButton.textContent);
-        }
     }
-}
-function operate(num1,num2,operator){
-    return operator(num1,num2);
 }
