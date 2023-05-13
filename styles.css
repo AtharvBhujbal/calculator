@@ -1,3 +1,24 @@
 body{
+    height: 95vh;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background-color: bisque;
+    height: 60vh;
+    width: 50vh;
+}
+.Display{
+    background-color: rgb(146, 180, 170);
+}
+.number_input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.button{
+    border: none;
+    height: 3vh;
 }
