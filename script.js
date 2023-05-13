@@ -12,6 +12,7 @@ function divide(num1,num2){
     return num1/num2;
 };
 let display=document.querySelector('.Display');
+const secondary_display=document.querySelector('.secondary_display');
 let buttons=document.querySelectorAll('.button');
 buttons.forEach(button=>button.addEventListener('click', handleClick));
 function handleClick(e){
@@ -29,6 +30,12 @@ function handleClick(e){
             num2=Number(num2);
             display.textContent=num2;
         }
+    }
+    if(num2===0){
+        secondary_display.textContent=num1+operator;
+    }
+    if(num2!==0){
+        secondary_display.textContent=num1+operator+num2;
     }
 }
 function operate(num1,num2,operator){
@@ -48,6 +55,7 @@ equal.addEventListener('click',calculate);
 function calculate() {
   const result = operate(num1, num2, operator);
   display.textContent = result;
+  secondary_display.textContent=num1+operator+num2+"=";
   // reset the values of num1, num2, and operator
   num1 = result;
   num2 = 0;
@@ -59,6 +67,7 @@ function fun_clear(){
     num1=num2=0;
     operator="";
     display.textContent=0;
+    secondary_display.textContent="";
 }
 const backspace=document.querySelector('.backspace');
 backspace.addEventListener('click',fun_backspace);
