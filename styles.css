@@ -1,6 +1,6 @@
 body{
     font-family: 'Saira', sans-serif;
-    background-color: rgb(131, 177, 230);
+    background-color:  #457b9d;
     height: 95vh;
     text-align: center;
     display: flex;
@@ -10,31 +10,32 @@ body{
 }
 .main{
     border-radius: 2vh;
-    background-color: bisque;
-    height: 62vh;
-    width: 50vh;
+    background-color:#1d3557;
+    height: 72vh;
+    width: 58vh;
+    /* padding: 4vh; */
 }
 .display_container{
-    background-color: rgb(146, 180, 170);
-    height: 10vh;
-    margin: 0.7vh;
+    background-color: #a8dadc;
+    height: 15vh;
+    margin: 3vh;
     padding-right: 1vh;
     text-align: right;
     border-radius: 2vh;
 }
 .secondary_display{
-    height: 3vh;
-    font-size: 3vh;
+    height: 4vh;
+    font-size: 4vh;
 }
 .Display{
-    padding-top: 0.5vh;
+    margin-top: 1vh;
     overflow: hidden;
-    font-size: 4.8vh;
+    font-size: 6vh;
 }
 .number_input{
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 10px;
     justify-content: center;
 }
 button{
@@ -44,26 +45,26 @@ button{
     border: none;
 }
 .button,.decimal,.equal{
-    height: 10vh;
+    height: 9vh;
     width: 11.8vh;
     transition: .3s ease-in-out;
 }
 .clear,.backspace{
-    height: 8vh;
-    width: 24.3vh;
+    height: 7vh;
+    width: 24.8vh;
     transition: .3s ease-in-out;
 }
 .clear:hover{
-    background-color: rgba(60, 101, 214, 0.712);
+    background-color:  #e63946;
 }
 .backspace:hover{
-    background-color: rgba(189, 5, 5, 0.712);
+    background-color:rgba(60, 101, 214, 0.712);
 }
 .button:hover,.decimal:hover{
     background-color:rgb(190, 218, 250);
 }
 .equal:hover{
-    background-color: rgba(64, 197, 64, 0.685);
+    background-color: #74a685;
 }
 img{
     transition: transform 0.3s ease-in-out;
