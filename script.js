@@ -43,3 +43,13 @@ function operate(num1,num2,operator){
             return divide(num1,num2);
     }
 }
+const equal=document.querySelector('.equal');
+equal.addEventListener('click',calculate);
+function calculate() {
+  const result = operate(num1, num2, operator);
+  display.textContent = result;
+  // reset the values of num1, num2, and operator
+  num1 = result;
+  num2 = 0;
+  operator = "";
+}
