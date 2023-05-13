@@ -54,7 +54,7 @@ const equal=document.querySelector('.equal');
 equal.addEventListener('click',calculate);
 function calculate() {
   let result = operate(num1, num2, operator);
-  result=cutDecimals(result,15);
+  result=cutDecimals(result,3);
   display.textContent = result;
   secondary_display.textContent=num1+operator+num2+"=";
   // reset the values of num1, num2, and operator
