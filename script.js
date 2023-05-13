@@ -60,3 +60,9 @@ function fun_clear(){
     operator="";
     display.textContent=0;
 }
+const backspace=document.querySelector('.backspace');
+backspace.addEventListener('click',fun_backspace);
+function fun_backspace(){
+    display.textContent=display.textContent.substring(0,display.textContent.length-1);
+    if(display.textContent.length==0) {display.textContent=0};
+}
