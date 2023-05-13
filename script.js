@@ -12,13 +12,19 @@ function divide(num1,num2){
     return num1/num2;
 };
 let button=document.querySelectorAll('button');
-button.forEach(button=>button.addEventListener('click',getclass));
-function getclass(e){
-    if(isNaN(button.classList)) {
-        operator=button.classList;
+button.forEach(button=>button.addEventListener('click',handleClick));
+function handleClick(e){
+    let clickedButton= e.target;
+    if(isNaN(clickedButton.textContent)) {
+        operator=clickedButton.textContent;
     }
     else{
-        num1=""+button.classList ;
+        if(operator===""){
+            num1=parseInt(clickedButton.textContent);
+        }
+        else{
+            num2=parseInt(clickedButton.textContent);
+        }
     }
 }
 function operate(num1,num2,operator){
