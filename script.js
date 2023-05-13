@@ -62,7 +62,26 @@ function fun_clear(){
 }
 const backspace=document.querySelector('.backspace');
 backspace.addEventListener('click',fun_backspace);
-function fun_backspace(){
-    display.textContent=display.textContent.substring(0,display.textContent.length-1);
-    if(display.textContent.length==0) {display.textContent=0};
+function fun_backspace() {
+    display.textContent = display.textContent.substring(0, display.textContent.length - 1);
+
+    if (display.textContent.length === 0) {
+        display.textContent = 0;
+        if (operator !== "" && num2 !== "") {
+            num2 = num2.toString().substring(0, num2.toString().length - 1);
+            display.textContent = num1 + operator + num2;
+        }
+        else if(operate!=="" && num2===""){
+            operator="";
+            display.textContent=num1;
+        }
+         else {
+            num1 = num1.toString().substring(0, num1.toString().length - 1);
+            display.textContent = num1;
+        }
+    } else if (operator !== "") {
+        num2 = display.textContent.substring(num1.toString().length + 1);
+    } else {
+        num1 = Number(display.textContent);
+    }
 }
