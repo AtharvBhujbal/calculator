@@ -53,3 +53,10 @@ function calculate() {
   num2 = 0;
   operator = "";
 }
+const clear=document.querySelector('.clear');
+clear.addEventListener('click',fun_clear);
+function fun_clear(){
+    num1=num2=0;
+    operator="";
+    display.textContent=0;
+}
