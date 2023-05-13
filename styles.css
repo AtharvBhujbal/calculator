@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(131, 177, 230);
     height: 95vh;
     text-align: center;
     display: flex;
@@ -7,18 +8,28 @@ body{
 }
 .main{
     background-color: bisque;
-    height: 60vh;
+    height: 62vh;
     width: 50vh;
 }
 .Display{
     background-color: rgb(146, 180, 170);
+    height: 10vh;
+    margin: 0.7vh;
 }
 .number_input{
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 4px;
+    justify-content: center;
 }
-.button{
+button{
     border: none;
-    height: 3vh;
+}
+.button,.decimal,.equal{
+    height: 10vh;
+    width: 11.8vh;
+}
+.clear,.backspace{
+    height: 8vh;
+    width: 24.3vh;
 }
