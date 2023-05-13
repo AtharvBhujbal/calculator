@@ -1,9 +1,10 @@
 body{
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Saira', sans-serif;
     background-color: rgb(131, 177, 230);
     height: 95vh;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -63,4 +64,18 @@ button{
 }
 .equal:hover{
     background-color: rgba(64, 197, 64, 0.685);
+}
+img{
+    transition: transform 0.3s ease-in-out;
+}
+img:hover{
+    transform: scale(1.2);
+}
+.footer a img{
+    width: 25px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    margin: 2vh;
 }
