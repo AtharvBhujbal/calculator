@@ -8,6 +8,7 @@ body{
     align-items: center;
 }
 .main{
+    border-radius: 2vh;
     background-color: bisque;
     height: 62vh;
     width: 50vh;
@@ -16,15 +17,18 @@ body{
     background-color: rgb(146, 180, 170);
     height: 10vh;
     margin: 0.7vh;
-    padding-right: 2vh;
+    padding-right: 1vh;
     text-align: right;
+    border-radius: 2vh;
 }
 .secondary_display{
     height: 3vh;
     font-size: 3vh;
 }
 .Display{
-    font-size: 6vh;
+    padding-top: 0.5vh;
+    overflow: hidden;
+    font-size: 4.8vh;
 }
 .number_input{
     display: flex;
@@ -33,6 +37,7 @@ body{
     justify-content: center;
 }
 button{
+    border-radius: 2vh;
     font-family: 'Saira', sans-serif;
     font-size: 30px;
     border: none;
@@ -40,8 +45,22 @@ button{
 .button,.decimal,.equal{
     height: 10vh;
     width: 11.8vh;
+    transition: .3s ease-in-out;
 }
 .clear,.backspace{
     height: 8vh;
     width: 24.3vh;
+    transition: .3s ease-in-out;
+}
+.clear:hover{
+    background-color: rgba(60, 101, 214, 0.712);
+}
+.backspace:hover{
+    background-color: rgba(189, 5, 5, 0.712);
+}
+.button:hover,.decimal:hover{
+    background-color:rgb(190, 218, 250);
+}
+.equal:hover{
+    background-color: rgba(64, 197, 64, 0.685);
 }
