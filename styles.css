@@ -20,7 +20,7 @@ body{
     margin: 3vh;
     padding-right: 1vh;
     text-align: right;
-    border-radius: 2vh;
+    border-radius: 1vh;
 }
 .secondary_display{
     height: 4vh;
@@ -34,13 +34,13 @@ body{
 .number_input{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 2vh;
     justify-content: center;
 }
 button{
-    border-radius: 2vh;
+    border-radius: 1vh;
     font-family: 'Saira', sans-serif;
-    font-size: 30px;
+    font-size: 3.5vh;
     border: none;
     transition: .3s ease-in-out;
 }
@@ -48,11 +48,11 @@ button:hover{
     transform: scale(0.98);
 }
 .button,.decimal,.equal{
-    height: 9vh;
-    width: 9.7vh;
+    height: 8.5vh;
+    width: 9.5vh;
 }
 .clear,.backspace{
-    height: 7vh;
+    height: 6vh;
     width: 20.8vh;
 }
 .clear:hover{
