@@ -85,3 +85,19 @@ function fun_backspace() {
         num1 = Number(display.textContent);
     }
 }
+const decimal=document.querySelector('.decimal');
+decimal.addEventListener('click',addDecimal);
+function addDecimal(){
+    if(operator!==""){
+        if(!num2.toString().includes(".")){
+            num2+=".";
+        }
+        display.textContent=num2;
+    }
+    else{
+        if(!num1.toString().includes(".")){
+            num1+=".";
+        }
+        display.textContent=num1;
+    }
+}
