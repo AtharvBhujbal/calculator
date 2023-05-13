@@ -53,7 +53,8 @@ function operate(num1,num2,operator){
 const equal=document.querySelector('.equal');
 equal.addEventListener('click',calculate);
 function calculate() {
-  const result = operate(num1, num2, operator);
+  let result = operate(num1, num2, operator);
+  result=cutDecimals(result,15);
   display.textContent = result;
   secondary_display.textContent=num1+operator+num2+"=";
   // reset the values of num1, num2, and operator
@@ -110,3 +111,6 @@ function addDecimal(){
         display.textContent=num1;
     }
 }
+function cutDecimals(number,decimals){
+    return number.toLocaleString('fullwide', {maximumFractionDigits:decimals})
+  }
