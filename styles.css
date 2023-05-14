@@ -21,6 +21,7 @@ body{
     padding-right: 1vh;
     text-align: right;
     border-radius: 1vh;
+    overflow: hidden;
 }
 .secondary_display{
     height: 4vh;
@@ -28,7 +29,6 @@ body{
 }
 .Display{
     margin-top: 1vh;
-    overflow: hidden;
     font-size: 7vh;
 }
 .number_input{
