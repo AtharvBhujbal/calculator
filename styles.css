@@ -21,8 +21,11 @@ body{
     padding-right: 1vh;
     text-align: right;
     border-radius: 1vh;
-    overflow: hidden;
+    overflow: scroll;
 }
+.display_container::-webkit-scrollbar{
+    display: none;
+  }
 .secondary_display{
     height: 4vh;
     font-size: 4vh;
