@@ -22,6 +22,7 @@ body{
     text-align: right;
     border-radius: 1vh;
     overflow: scroll;
+    overflow-y: hidden;
 }
 .display_container::-webkit-scrollbar{
     display: none;
