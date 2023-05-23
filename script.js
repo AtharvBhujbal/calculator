@@ -113,4 +113,73 @@ function addDecimal(){
 }
 function cutDecimals(number,decimals){
     return number.toLocaleString('fullwide', {maximumFractionDigits:decimals})
-  }
+}
+window.addEventListener('keydown',handleKeyboardInput);
+function handleKeyboardInput(e) {
+    const key = e.key;
+    let button = null;
+  
+    // Map keyboard keys to corresponding calculator buttons
+    switch (key) {
+    case '1':
+        button = document.querySelector('.button.num-1');
+        break;
+    case '2':
+        button = document.querySelector('.button.num-2');
+        break;
+    case '3':
+        button = document.querySelector('.button.num-3');
+        break;
+    case '4':
+        button = document.querySelector('.button.num-4');
+        break;
+    case '5':
+        button = document.querySelector('.button.num-5');
+        break;
+    case '6':
+        button = document.querySelector('.button.num-6');
+        break;
+    case '7':
+        button = document.querySelector('.button.num-7');
+        break;
+    case '8':
+        button = document.querySelector('.button.num-8');
+        break;
+    case '9':
+        button = document.querySelector('.button.num-9');
+        break;
+    case '0':
+        button = document.querySelector('.button.num-0');
+        break;
+    case '+':
+        button = document.querySelector('.button.add');
+        break;
+    case '-':
+        button = document.querySelector('.button.subtract');
+        break;
+    case '*':
+        button = document.querySelector('.button.multiply');
+        break;
+    case '/':
+        button = document.querySelector('.button.divide');
+        break;
+    case '.':
+        button = document.querySelector('.decimal');
+        break;
+    case 'Enter':
+        button = document.querySelector('.equal');
+        break;
+    case 'Backspace':
+        button = document.querySelector('.backspace');
+        break;
+    case 'Escape':
+        button = document.querySelector('.clear');
+        break;
+    default:
+        break;
+    }
+
+    if (button) {
+    button.click(); // Trigger the click event on the corresponding button
+    }
+}  
